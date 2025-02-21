@@ -9,7 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
 
-  const API_URL = import.meta.env.VITE_BACKEND_URL || "https://bajaj-project-ejd8vevq2-anurags-projects-b08b7a94.vercel.app/api/bfhl";
+  const API_URL = "https://bajaj-project-umber.vercel.app/";
 
 
  
