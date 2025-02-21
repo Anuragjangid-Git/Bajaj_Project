@@ -13,10 +13,9 @@ function App() {
 
  
   useEffect(() => {
-    if (response?.roll_number) {
-      document.title = response.roll_number;
-    }
-  }, [response?.roll_number]);
+    document.title = "22BCS10441";
+  }, []);
+  
 
 
   const validateAndParseJSON = (input) => {
