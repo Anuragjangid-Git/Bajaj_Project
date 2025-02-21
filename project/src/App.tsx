@@ -9,7 +9,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
 
-  const API_URL = import.meta.env.VITE_BACKEND_URL || "https://bajaj-project-umber.vercel.app/";
+  const API_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api/bfhl";
+
 
  
   useEffect(() => {
