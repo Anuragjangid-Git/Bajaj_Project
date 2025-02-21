@@ -6,24 +6,27 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://bajaj-project-wojc.vercel.app/", 
-    methods: "GET, POST",
-    allowedHeaders: "Content-Type"
+    origin: "https://bajaj-project-wojc.vercel.app", 
+    methods: "GET, POST, OPTIONS",
+    allowedHeaders: ["Content-Type"]
 }));
 
+
+app.options("*", cors());
+
 app.use(bodyParser.json());
+
 
 app.get("/", (req, res) => {
     res.status(200).json({ message: "Backend is running on Vercel!" });
 });
 
 
-app.get("/bfhl", (req, res) => {
+app.get("/api/bfhl", (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
 
-
-app.post("/bfhl", (req, res) => {
+app.post("/api/bfhl", (req, res) => {
     try {
         const { data } = req.body;
         if (!Array.isArray(data)) {
