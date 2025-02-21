@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://bajaj-project-wojc.vercel.app", 
+    origin: "https://bajaj-project-wojc.vercel.app/", 
     methods: "GET, POST",
     allowedHeaders: "Content-Type"
 }));
