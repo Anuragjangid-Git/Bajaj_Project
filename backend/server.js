@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+
 app.use(cors({
-    origin: "https://bajaj-project-wojc.vercel.app", 
+    origin: "https://bajaj-project-wojc.vercel.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
 }));
@@ -22,7 +23,6 @@ app.get("/api/bfhl", (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
 
-
 app.post("/api/bfhl", (req, res) => {
     try {
         const { data } = req.body;
@@ -34,7 +34,6 @@ app.post("/api/bfhl", (req, res) => {
         let numbers = [];
         let alphabets = [];
 
- 
         data.forEach(item => {
             if (!isNaN(item)) {
                 numbers.push(item);
@@ -43,10 +42,8 @@ app.post("/api/bfhl", (req, res) => {
             }
         });
 
-        
         let highest_alphabet = alphabets.length ? [alphabets.sort().pop()] : [];
 
-   
         res.status(200).json({
             is_success: true,
             user_id: "Anurag_Jangid_30082004",
