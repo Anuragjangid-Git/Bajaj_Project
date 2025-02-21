@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://bajaj-project-wojc.vercel.app",
+    origin: "https://bajaj-project-wojc.vercel.app", 
     methods: "GET, POST",
     allowedHeaders: "Content-Type"
 }));
@@ -17,9 +17,11 @@ app.get("/", (req, res) => {
     res.status(200).json({ message: "Backend is running on Vercel!" });
 });
 
+
 app.get("/bfhl", (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
+
 
 app.post("/bfhl", (req, res) => {
     try {
@@ -55,5 +57,5 @@ app.post("/bfhl", (req, res) => {
     }
 });
 
-// Export for Vercel
+
 module.exports = app;
